@@ -1,43 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:ruiz/pantallas_0550/panel_0550/widgets_0550/panel_pantallas_0550.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MiAppAccessphone());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MiAppAccessphone extends StatelessWidget {
+  const MiAppAccessphone({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
+      debugShowCheckedModeBanner: false,
+      title: "Ruiz Accessphone 0550",
       theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
+          useMaterial3: true),
+      home: Panelpantallas_0550(),
     );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
-    );
-  }
+  } //
 }
